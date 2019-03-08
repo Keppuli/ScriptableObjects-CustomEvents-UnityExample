@@ -1,8 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 //https://youtu.be/raQ3iHhE_Kk?t=1176
 [System.Serializable] // The Serializable attribute lets you embed a class with sub properties in the inspector.
+
 public class FloatReference // Not inheriting from anything
 {
     /* Designer configures obj to use either constant or variable value,

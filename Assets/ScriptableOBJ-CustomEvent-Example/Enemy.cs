@@ -6,7 +6,6 @@ using UnityEngine.Events; // Important  for custom events
 public class Enemy : MonoBehaviour {
 
     public FloatReference hpPlayer;
-    public FloatReference moveSpeedPlayer;
     public FloatReference damageAmount;
     public GameEvent damagePlayerEvent; // Custom Events
 

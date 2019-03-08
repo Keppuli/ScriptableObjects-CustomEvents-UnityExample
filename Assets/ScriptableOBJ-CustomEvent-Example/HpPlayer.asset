@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Name: HpPlayer
   m_EditorClassIdentifier: 
   description: Player HP
-  Value: 20
+  Value: 0

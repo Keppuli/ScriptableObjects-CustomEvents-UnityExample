@@ -3,17 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events; // Important  for custom events
 
-public class Player : MonoBehaviour {
+public class Player : MonoBehaviour
+{
 
     // Scriptable objects
     public FloatReference hp;
     public FloatReference hpMax;
     public FloatReference moveSpeed;
-    public GameEvent damageEvent; // Custom Events
+    //public GameEvent damagePlayerEvent; // Custom Events
 
     Rigidbody rb;
 
-    void Start () {
+    void Start()
+    {
         rb = GetComponent<Rigidbody>();
         hp.SetValue(hpMax.GetValue()); // Reset hp 
     }
@@ -26,5 +28,12 @@ public class Player : MonoBehaviour {
         rb.AddForce(movement * moveSpeed.GetValue()); // FloatReference 
     }
 
-    
+    public void CheckDamage()
+    {
+        Debug.Log("Player checks HP for death. HP is: "+ hp.GetValue());
+
+        if (hp.GetValue() <= 0)
+            Destroy(gameObject);
+    }
+
 }

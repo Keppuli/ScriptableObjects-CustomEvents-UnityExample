@@ -11,8 +11,13 @@ public class DisplayHp : MonoBehaviour {
     private void Start()
     {
         myText = GetComponent<Text>();
-    }
-    void Update () {
         myText.text = hpPlayer.Value.ToString();
     }
+
+    public void UpdateHP()
+    {
+        Debug.Log("Updated player HP in GUI: " + gameObject);
+        myText.text = hpPlayer.Value.ToString();
+    }
+
 }

@@ -15,11 +15,13 @@ public class VariableAudioTrigger : MonoBehaviour {
     {
         audioSource = GetComponent<AudioSource>();
     }
+
     public void PlaySound()
     {
         Debug.Log("PlaySound() activated in: "+gameObject);
         audioSource.PlayOneShot(playerHurtSFX);
     }
+
     public void CheckForWarningSound()
     {
         Debug.Log("CheckForWarningSound() activated in: " + gameObject);
@@ -28,15 +30,5 @@ public class VariableAudioTrigger : MonoBehaviour {
             audioSource.Play();
         }
     }
-    /*
-    void Update () {
-		
-        if ((hpPlayer.Value < triggerThreshold.constantValue) && !audioSource.isPlaying)
-        {
-            audioSource.Play();
-        }
-        if (hpPlayer.Value > triggerThreshold.constantValue)
-            audioSource.Stop();
-    }
-    */
+
 }
